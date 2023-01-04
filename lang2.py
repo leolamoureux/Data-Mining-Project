@@ -1,3 +1,7 @@
+# pip install spacy
+# pip install spacy_langdetect
+# python3.10 -m spacy download en_core_web_sm
+
 import pandas as pd
 import spacy
 from spacy.language import Language
