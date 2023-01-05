@@ -2,7 +2,16 @@
 # pip install spacy_langdetect
 # python3.10 -m spacy download en_core_web_sm
 
-import pandas as pd
+import langdetect
+
+def detect_language(text):
+    return langdetect.detect(text)
+
+# Example usage
+text = "This is an example of a large text. It is written in English, but it could contain text in other languages as well."
+print(detect_language(text))
+
+'''import pandas as pd
 import spacy
 from spacy.language import Language
 from spacy_langdetect import LanguageDetector
@@ -22,4 +31,4 @@ for text in df['text']:
     doc = nlp(text)
     if doc._.language['language'] != 'en':
         print(str(i) + str(doc._.language))
-    i += 1
+    i += 1'''
